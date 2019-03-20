@@ -166,9 +166,8 @@ class TLDetector(object):
                 light = stoplight
                 light_wp = temp_wp_idx
 
-        if light:
+        if light and (diff <= 200):
             state = self.get_light_state(light)
-            rospy.logwarn("Found traffic light: {0} - {1}".format(light_wp, state))
             return light_wp, state
 
         return -1, TrafficLight.UNKNOWN
