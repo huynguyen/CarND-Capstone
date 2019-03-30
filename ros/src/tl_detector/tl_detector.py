@@ -14,7 +14,7 @@ import cv2
 import yaml
 
 STATE_COUNT_THRESHOLD = 3
-CAMERA_IMG_PROCESS_RATE = 0.80
+CAMERA_IMG_PROCESS_RATE = 0.01
 
 class TLDetector(object):
     def __init__(self):
