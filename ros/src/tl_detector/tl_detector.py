@@ -78,7 +78,7 @@ class TLDetector(object):
 
         """
         time_elapsed = timer() - self.last_img_processed
-        if (time_elapsed < CAMERA_IMG_PROCESS_RATE):
+        if (time_elapsed < CAMERA_IMG_PROCESS_RATE) or (self.light_classifier is None):
             return
 
         self.has_image = True
